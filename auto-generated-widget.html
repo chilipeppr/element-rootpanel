@@ -104,6 +104,7 @@ cprequire(["chilipeppr_ready"], function () {
                         } else if (data.Error && data.Error == true) {
                             //chilipeppr.publish("/com-chilipeppr-elem-flashmsg/flashmsg", "Error Retrieving Workspace", data.Msg);
                             $('#pnlWorkspace').text("Error retrieving workspace. " + data.Msg);
+                            console.error("Got error retrieving workspace. data:", data);
                             
                         } else {
                             
